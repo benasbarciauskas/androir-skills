@@ -1,0 +1,19 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "androir-skills",
+  "version": "0.1.0",
+  "description": "Community patterns and skills for androir-mcp — APP.md app maps, element and screen patterns, and ready-made SKILL.md flows that make androir-mcp drive Android apps reliably.",
+  "owner": {
+    "name": "Benas Barciauskas",
+    "email": "benasbarciauskas@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "skills",
+      "description": "Patterns and skills for androir-mcp — declarative Android app maps (APP.md, element/screen patterns) and imperative SKILL.md flows the agent executes.",
+      "version": "0.1.0",
+      "source": "./",
+      "category": "automation"
+    }
+  ]
+}

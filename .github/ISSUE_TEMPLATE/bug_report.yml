@@ -1,0 +1,38 @@
+name: Bug report
+description: A pattern or skill is wrong, stale, or fails to validate
+title: "[bug] <short description>"
+labels: ["bug"]
+body:
+  - type: input
+    id: file
+    attributes:
+      label: Affected file
+      description: Which pattern or skill is wrong?
+      placeholder: patterns/apps/instagram/APP.md
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What's wrong
+      description: What did you expect, and what actually happened? Include the app version if relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: Steps, the androir-mcp call, or the validator output that shows the problem.
+      placeholder: |
+        1. Drive Instagram with androir-mcp
+        2. The "Skip" list misses the new "..." button
+    validations:
+      required: false
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Android version / device / androir-mcp version, if relevant.
+      placeholder: Android 14, Pixel 7, androir-mcp 0.x
+    validations:
+      required: false
