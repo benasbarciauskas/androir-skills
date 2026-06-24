@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: androir-mcp (the server)
+    url: https://github.com/benasbarciauskas/androir-mcp
+    about: Issues with the Android automation server itself belong in androir-mcp, not this content library.
+  - name: How patterns and skills work
+    url: https://github.com/benasbarciauskas/androir-skills/blob/main/patterns/README.md
+    about: Read the pattern format before opening a new-app-pattern issue.

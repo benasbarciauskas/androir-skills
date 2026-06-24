@@ -1,0 +1,73 @@
+name: New app pattern
+description: Propose (or request) an APP.md for an Android app
+title: "[pattern] <App name>"
+labels: ["pattern", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping grow the library! An `APP.md` maps an app's
+        bottom-nav structure, the obstacles to auto-dismiss, and the
+        destructive buttons to skip. If you can, open a PR with the file —
+        otherwise fill this in and someone can pick it up.
+  - type: input
+    id: app
+    attributes:
+      label: App name
+      placeholder: Reddit
+    validations:
+      required: true
+  - type: input
+    id: package
+    attributes:
+      label: Android package id
+      description: e.g. com.reddit.frontpage — find it in the Play Store URL or via `adb shell pm list packages`.
+      placeholder: com.reddit.frontpage
+    validations:
+      required: true
+  - type: dropdown
+    id: archetype
+    attributes:
+      label: Archetype
+      description: How does the app navigate?
+      options:
+        - social-feed
+        - dashboard
+        - settings-list
+        - content-grid
+        - conversation-list
+        - utility-display
+        - detail-form
+    validations:
+      required: true
+  - type: textarea
+    id: structure
+    attributes:
+      label: Structure (bottom-nav tabs)
+      description: List the bottom navigation tabs and what each one is.
+      placeholder: |
+        Bottom nav with 5 tabs: Home, Communities, Create (+), Chat, Inbox.
+    validations:
+      required: true
+  - type: textarea
+    id: obstacles
+    attributes:
+      label: Obstacles (popup -> action)
+      description: Permission dialogs, login walls, notification prompts, upsells.
+      placeholder: |
+        - Notification permission -> tap "Don't allow"
+        - "Sign up" wall -> tap the X / press_back
+    validations:
+      required: false
+  - type: textarea
+    id: skip
+    attributes:
+      label: Skip (dangerous buttons)
+      description: Destructive or irreversible buttons the agent must never tap.
+      placeholder: |
+        - Post
+        - Delete
+        - Log out
+        - Subscribe
+    validations:
+      required: false
